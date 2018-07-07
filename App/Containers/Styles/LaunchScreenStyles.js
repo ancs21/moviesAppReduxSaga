@@ -1,18 +1,41 @@
 import { StyleSheet } from 'react-native'
-import { Metrics, ApplicationStyles } from '../../Themes/'
+import { ApplicationStyles, Metrics, Colors } from '../../Themes/'
 
 export default StyleSheet.create({
   ...ApplicationStyles.screen,
   container: {
-    paddingBottom: Metrics.baseMargin
+    flex: 1,
+    marginTop: Metrics.navBarHeight,
+    backgroundColor: Colors.background
   },
-  logo: {
-    marginTop: Metrics.doubleSection,
-    height: Metrics.images.logo,
-    width: Metrics.images.logo,
-    resizeMode: 'contain'
+  row: {
+    width: 100,
+    height: 200,
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: Metrics.baseMargin,
+    backgroundColor: Colors.fire,
+    borderRadius: Metrics.smallMargin
   },
-  centered: {
-    alignItems: 'center'
+  boldLabel: {
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    color: Colors.snow,
+    textAlign: 'center',
+    marginBottom: Metrics.smallMargin
+  },
+  label: {
+    alignSelf: 'center',
+    color: Colors.snow,
+    textAlign: 'center'
+  },
+  listContent: {
+    justifyContent: 'space-around',
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  }, 
+  image_poster: {
+    width: 150,
+    height: 180
   }
 })
